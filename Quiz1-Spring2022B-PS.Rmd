@@ -1,0 +1,119 @@
+---
+title: "Quiz 1B"
+author: "Your Name Here"
+date: 'Last compiled: `r format(Sys.time(), "%B %d, %Y at %X")`'
+output: bookdown::html_document2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA, warning = FALSE, message = FALSE, fig.align = "center")
+library(scales)
+library(tidyverse)
+```
+
+__________
+
+**Note: By committing and pushing this Quiz to the class repository you are acknowledging that all work is your own accept as noted in your acknowledgement statement at the end of the document.  Please commit and push your work to the class repository no later than 4:00 pm, Friday March 18, 2022. **
+
+____________
+
+
+1. Load the `tidyverse` and `fst` packages.
+
+```{r}
+# Your Code Here
+
+```
+
+_______
+
+2. Read into R the data set `late_shipments.fst` stored in the `data` directory using the `read.fst()` function and store the results in `late_shipments`.
+
+```{r}
+# Your Code Here
+
+```
+
+__________
+
+3. Create a subset of `late_shipments` named `late_shipments_air` where the `shipment_mode` is `"Air"` and the `country` is `"Vietnam"`.  The dimensions of `late_shipments_air` should be 135 by 26.  Use `late_shipments_air` for all subsequent questions.
+
+```{r}
+# Your Code Here
+
+```
+
+__________
+
+4. Create a scatterplot of `freight_cost_usd` versus `weight_kilograms` mapping `sub_classification` to `color` using the `late_shipments_air` data frame.  Superimpose least squares regression lines on the scatterplot.
+
+```{r, label = "q4", fig.cap = "Scatterplot of Freight Cost in USD versus Weight (Kilograms)"}
+# Your Code Here
+ggplot(data = cars) # replace with appropriate tibble and arguments
+```
+
+___________
+
+5.  Based on scatterplot created in Figure \@ref(fig:q4), do you think it is appropriate to use a parallel slopes model or a non-additive (interaction) model?  Please explain your rationale.
+
+**Your Answer Here**
+
+_____________
+
+6. Create histograms of `freight_cost_usd` by `sub_classification` such that the histogram for `Adult` is displayed on top of the histogram for `Pediatric`. Set the `binwidth` to 500 and use your favorite color for the `fill` argument. (Hint: `facet_grid()`)
+
+```{r, label = "q6", fig.cap = "Histograms of freight cost in US dollars"}
+# Your Code Here
+
+```
+
+___________
+
+7.  Characterize the distribution of `freight_cost_usd` for `Adult`.
+
+
+```{r}
+# Your Code Here
+
+```
+
+**Your Answer Here**
+
+_______________
+
+8.  Create a parallel slopes model for regressing `freight_cost_usd` on to `weight_kilograms` for the different levels in `sub_classification`.  Store the result in `mod_ps`.  Report and interpret the slope of the model.  What is the model's $y-$intercept for `Pediatric` shipments?  
+
+```{r}
+# Your Code Here
+
+```
+
+**Your Answer Here**
+
+_________
+
+9.  Create a vector containing the 121 values of `freight_cost_usd` for `Adult` shipments and name the vector `ques9`.
+
+ 
+```{r}
+# Your Code Here
+
+```
+
+____________
+
+10. Construct a 90% bootstrap percentile confidence interval for the median `freight_cost_usd` for `Adult` using the data in vector `ques9`.  Use 10,000 bootstrap samples to answer the problem.
+
+```{r}
+# Your Code Here
+
+```
+
+**Your Answer Here**
+
+
+_____________
+
+**Acknowledgement Statement:  All work on this quiz is entirely my own.**
+
+____________
