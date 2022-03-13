@@ -60,7 +60,7 @@ ___________
 
 _____________
 
-6. Create histograms of `freight_cost_usd` by `sub_classification` such that the histogram for `Adult` is displayed on top of the histogram for `Pediatric`. Set the `binwidth` to 500 and use your favorite color for the `fill` argument. (Hint: `facet_grid()`)
+6. Create histograms of `freight_cost_usd` by `sub_classification` such that the histogram for `Adult` is displayed above the histogram for `Pediatric`. Set the `binwidth` to 500 and use your favorite color for the `fill` argument. (Hint: `facet_grid()`)
 
 ```{r, label = "q6", fig.cap = "Histograms of freight cost in US dollars"}
 # Your Code Here
